@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache" lang="en">
+  <head>
+    <title>Attendance Tracker</title>
+    
+	<style type="text/css">
+      body{background:url(bb.jpg);
+	   background-size:200% 200%;
+	   -moz-background-size:100% 100%; /* Firefox 3.6 */
+	   background-repeat:no-repeat;
+	   word-wrap:break-word;}
+     
+	  div{background:url(02.jpg);
+	  border:2px solid #a1a1a1;
+      	  padding:10px 40px; 
+          word-wrap:break-word;
+          width:1200px;
+          height: 200px;
+          border-radius:25px;}
+    
+	  div.ani{width:120px;
+          height: 5px;
+          background:grey;
+          position:relative;
+          animation:myfirst 15s;
+          -moz-animation:myfirst 15s; /* Firefox */
+          -webkit-animation:myfirst 15s; /* Safari and Chrome */
+          -o-animation:myfirst 15s; /* Opera */}
+          
+      @keyframes myfirst{
+	0%   {background:grey; left:0px; top:0px;}
+        20%  {background:yellow; left:210px; top:0px;}
+        40%  {background:lightblue; left:420px; top:0px;}
+        60%  {background:green; left:730px; top:0px;}
+        80%  {background:red; left:940px; top:0px;}
+    	100% {background:grey; left:1150px; top:0px;}}
+  
+      @-moz-keyframes myfirst /* Firefox */{
+	0%   {background:grey; left:0px; top:0px;}
+        20%  {background:yellow; left:210px; top:0px;}
+        40%  {background:lightblue; left:420px; top:0px;}
+        60%  {background:green; left:730px; top:0px;}
+        80%  {background:red; left:940px; top:0px;}
+    	100% {background:grey; left:1150px; top:0px;}}
+		          
+      @-webkit-keyframes myfirst /* Safari and Chrome */{
+        0%   {background:grey; left:0px; top:0px;}
+        20%  {background:yellow; left:210px; top:0px;}
+        40%  {background:lightblue; left:420px; top:0px;}
+        60%  {background:green; left:730px; top:0px;}
+        80%  {background:red; left:940px; top:0px;}
+    	100% {background:grey; left:1150px; top:0px;}}
+	</style>
+
+  </head>
+
+  
+  <body>
+	<font color="black" />
+	<div class="ani">Track Attendance</div>
+	
+    <font color="white" size="7"/>
+    <center>
+      <div><h1>
+	    Attendance Tracker
+      </h1></div>
+    </center>
+	<br /><br />
+    <font size = 4 />
+    <center>
+      <form action="retrieve.php" method="post">
+        Enter USN : <input type="text" name="usn" />
+        <br /><input type="submit" />
+      </form>
+	</center>
+	
+  </body>
+</html>
